@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rubber Duck</title>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img id="duckLogo" src="/assets/duck.png" alt="Mr. Duck Logo" />
+        <h1>Mr. Duck</h1>
+      </div>
+      <p id="duckText" class="hidden">Mr. Duck whispers: Secret unlocked!</p>
+    </header>
+
+    <section>
+      <div class="sectionContainer">
+        <h2>Mr. Duck is listening to your problem</h2>
+        <textarea
+          id="textAreaInput"
+          placeholder="Describe your problem here..."
+        ></textarea>
+        <button id="sendButton">Send to Mr. Duck</button>
+        <p id="responseMessage"></p>
+        <h2>What you said to Mr Duck:</h2>
+        <ul id="messageList"></ul>
+      </div>
+      <div class="sectionContainer">
+        <h2>Select a Problem for Mr. Duck to help you with</h2>
+        <p id="item-response"></p>
+        <select id="item-select">
+          <option value="disabled select">Select a problem</option>
+          <option value="Error Messages">Error Messages</option>
+          <option value="Functionality Issues">Functionality Issues</option>
+          <option value="Performance Problems">Performance Problems</option>
+          <option value="Compatibility Issues">Compatibility Issues</option>
+        </select>
+        <ul id="item-list"></ul>
+      </div>
+    </section>
+
+    <script src="/js/index.js"></script>
+    <script src="/js/hoverEffect.js"></script>
+    <script src="/js/selectOpearation.js"></script>
+  </body>
+</html>
