@@ -2,7 +2,7 @@
 
 This repository contains solutions to several exercises designed to practice and enhance your web development skills using HTML, CSS, and JavaScript. Each exercise focuses on different aspects of web development, including DOM manipulation, event handling, and using LocalStorage.
 
-## Exercises Overview
+## Frontend Exercises: HTML, CSS, JavaScript
 
 1. **Show / Hide Message on Hover**: Learn how to show and hide elements using `mouseover` and `mouseout` events to manipulate CSS classes.
 
