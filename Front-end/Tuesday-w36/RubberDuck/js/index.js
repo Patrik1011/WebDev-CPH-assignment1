@@ -23,8 +23,8 @@ window.addEventListener('load', function () {
     storageOfMessages = JSON.parse(storedMessages);
     displayStoredMessages();
   }
-  const nameOfUser = prompt('What is your name?');
-  greeting.textContent = `Hello, ${nameOfUser}!`;
+  //const nameOfUser = prompt('What is your name?');
+  //greeting.textContent = `Hello, ${nameOfUser}!`;
 });
 
 sendButton.addEventListener('click', function () {

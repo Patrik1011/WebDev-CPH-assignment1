@@ -77,6 +77,22 @@ section {
   margin: 10px;
 }
 
+.button-container {
+  position: absolute;
+  right: 0;
+  margin-right: 60px;
+}
+
+#submit-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 ul {
   list-style: none;
   padding: 0;
