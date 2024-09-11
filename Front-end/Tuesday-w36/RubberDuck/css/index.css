@@ -78,12 +78,25 @@ section {
 }
 
 .button-container {
+  display: flex;
+  align-items: center;
   position: absolute;
   right: 0;
   margin-right: 60px;
 }
 
-#submit-button {
+.button-container h3 {
+  margin-right: 20px;
+}
+
+.logo-container button {
+  background-color: red;
+  margin-left: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header-button {
   background-color: #333;
   color: #fff;
   border: none;

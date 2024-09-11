@@ -6,8 +6,9 @@ const emailError = document.getElementById('email-error');
 const usernameError = document.getElementById('user-error');
 const passwordError = document.getElementById('password-error');
 
-function validateEmail(email) {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+function validateCphBusinessEmail(email) {
+  const regex = /^[^\s@]+@cphbusiness\.dk$/;
+  //const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 }
 
@@ -28,8 +29,8 @@ form.addEventListener('submit', (event) => {
   usernameError.textContent = '';
   passwordError.textContent = '';
 
-  if (!validateEmail(emailInput.value)) {
-    emailError.textContent = 'Please enter a valid email address.';
+  if (!validateCphBusinessEmail(emailInput.value)) {
+    emailError.textContent = 'Please enter a valid @cphbusiness.dk email.';
     valid = false;
   }
 
@@ -43,5 +44,21 @@ form.addEventListener('submit', (event) => {
     passwordError.textContent =
       'Password must be at least 8 characters, include a number and a special character.';
     valid = false;
+  }
+
+  if (valid) {
+    const username = usernameInput.value.trim();
+    const storedUserName = localStorage.getItem('username');
+
+    console.log(storedUserName);
+
+    if (username === storedUserName) {
+      alert('user already exists');
+      return;
+    } else {
+      localStorage.setItem('username', username);
+      alert('user created');
+    }
+    window.location.href = 'index.html';
   }
 });

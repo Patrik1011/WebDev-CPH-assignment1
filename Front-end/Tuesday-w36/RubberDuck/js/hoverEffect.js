@@ -1,5 +1,5 @@
-var duckText = document.getElementById('duckText');
-var duckLogo = document.getElementById('duckLogo');
+const duckText = document.getElementById('duckText');
+const duckLogo = document.getElementById('duckLogo');
 
 duckLogo.addEventListener('mouseover', function () {
   duckText.classList.remove('hidden');

@@ -2,14 +2,15 @@ const sendButton = document.getElementById('sendButton');
 const responseMessage = document.getElementById('responseMessage');
 const textInput = document.getElementById('textAreaInput');
 const greeting = document.getElementById('greeting');
+const userName = document.getElementById('user-name');
 
-const storageOfMessages = [];
+let storageOfMessages = [];
 
 function displayStoredMessages() {
-  var messageList = document.getElementById('messageList');
+  const messageList = document.getElementById('messageList');
   messageList.innerHTML = '';
   storageOfMessages.forEach(function (message) {
-    var li = document.createElement('li');
+    const li = document.createElement('li');
     li.textContent = message.text;
     console.log(message);
     li.setAttribute('title', 'Sent on ' + message.time);
@@ -18,17 +19,22 @@ function displayStoredMessages() {
 }
 
 window.addEventListener('load', function () {
-  var storedMessages = localStorage.getItem('storageOfMessages');
+  const storedMessages = localStorage.getItem('storageOfMessages');
+  const createdUser = localStorage.getItem('username');
   if (storedMessages) {
     storageOfMessages = JSON.parse(storedMessages);
     displayStoredMessages();
   }
+
+  userName.textContent = createdUser ? createdUser : '';
+
+  // prompt user for their name
   //const nameOfUser = prompt('What is your name?');
   //greeting.textContent = `Hello, ${nameOfUser}!`;
 });
 
 sendButton.addEventListener('click', function () {
-  var message = textInput.value;
+  const message = textInput.value;
   if (message.trim() === '') {
     responseMessage.textContent = 'You forgot to write a message!';
   } else {

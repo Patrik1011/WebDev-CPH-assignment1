@@ -11,14 +11,20 @@
       <div class="logo-container">
         <img id="duckLogo" src="/assets/duck.png" alt="Mr. Duck Logo" />
         <h1>Mr. Duck</h1>
+        <button id="force-answer-button" class="header-button">
+          Force answer
+        </button>
         <div class="button-container">
-        <a id="submit-button" href="form.html" type="button">Sign Up</a>
+          <h3 id="user-name"></h3>
+          <a class="header-button" href="form.html" type="button">Sign Up</a>
+        </div>
       </div>
-      </div>
-     
       <p id="duckText" class="hidden">Mr. Duck whispers: Secret unlocked!</p>
     </header>
-    <h2 id="greeting"></h2>
+    <div>
+      <h2 id="greeting"></h2>
+      <p id="joke-answer"></p>
+    </div>
     <section>
       <div class="sectionContainer">
         <h2>Mr. Duck is listening to your problem</h2>
@@ -48,5 +54,6 @@
     <script src="/js/index.js"></script>
     <script src="/js/hoverEffect.js"></script>
     <script src="/js/selectOpearation.js"></script>
+    <script src="/js/asyncAwait.js"></script>
   </body>
 </html>
