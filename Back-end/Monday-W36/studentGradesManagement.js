@@ -4,15 +4,15 @@ const student1 = {
   grades: [7, 7, 7, 10],
 };
 
-function addGrades(student, grade) {
+const addGrades = (student, grade) => {
   student.grades.push(grade);
   return student.grades;
-}
+};
 
-function updateStudentName(student, newName) {
+const updateStudentName = (student, newName) => {
   student.name = newName;
   return student.name;
-}
+};
 
 const student2 = {
   name: "Jacob",

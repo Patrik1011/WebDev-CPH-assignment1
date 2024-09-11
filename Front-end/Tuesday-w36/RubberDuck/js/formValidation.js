@@ -6,20 +6,20 @@ const emailError = document.getElementById('email-error');
 const usernameError = document.getElementById('user-error');
 const passwordError = document.getElementById('password-error');
 
-function validateCphBusinessEmail(email) {
+const validateCphBusinessEmail = (email) => {
   const regex = /^[^\s@]+@cphbusiness\.dk$/;
   //const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
-}
+};
 
-function validateUsername(username) {
+const validateUsername = (username) => {
   return username.length >= 4 && username.length <= 15;
-}
+};
 
-function validatePassword(password) {
+const validatePassword = (password) => {
   const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   return regex.test(password);
-}
+};
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -60,5 +60,32 @@ form.addEventListener('submit', (event) => {
       alert('user created');
     }
     window.location.href = 'index.html';
+  }
+});
+
+const profanities = ['admin', 'root', 'administrator'];
+
+usernameInput.addEventListener('input', () => {
+  const userInput = usernameInput.value.toLowerCase();
+
+  let containsProfanity = false;
+  profanities.forEach((word) => {
+    if (userInput.includes(word)) {
+      containsProfanity = true;
+    }
+  });
+
+  for (let word of profanities) {
+    if (userInput.includes(word)) {
+      containsProfanity = true;
+      break;
+    }
+  }
+
+  if (containsProfanity) {
+    usernameInput.value = '';
+    usernameError.textContent = 'Please avoid using inappropriate language.';
+  } else {
+    usernameError.textContent = '';
   }
 });

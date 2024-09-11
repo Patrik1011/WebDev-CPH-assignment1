@@ -6,7 +6,7 @@ var addButton = document.getElementById("addButton");
 var todoList = document.getElementById("todoList");
 var li = document.getElementsByTagName("li");
 
-function createTodo() {
+const createTodo = () => {
   var newTodoText = inputField.value.trim();
   if (newTodoText !== "") {
     var newTodo = document.createElement("li");
@@ -17,7 +17,7 @@ function createTodo() {
     });
   }
   inputField.value = "";
-}
+};
 
 addButton.addEventListener("click", function () {
   createTodo();

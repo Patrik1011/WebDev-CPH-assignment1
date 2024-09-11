@@ -6,7 +6,7 @@ const userName = document.getElementById('user-name');
 
 let storageOfMessages = [];
 
-function displayStoredMessages() {
+const displayStoredMessages = () => {
   const messageList = document.getElementById('messageList');
   messageList.innerHTML = '';
   storageOfMessages.forEach(function (message) {
@@ -16,7 +16,7 @@ function displayStoredMessages() {
     li.setAttribute('title', 'Sent on ' + message.time);
     messageList.appendChild(li);
   });
-}
+};
 
 window.addEventListener('load', function () {
   const storedMessages = localStorage.getItem('storageOfMessages');
