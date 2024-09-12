@@ -69,12 +69,6 @@ usernameInput.addEventListener('input', () => {
   const userInput = usernameInput.value.toLowerCase();
 
   let containsProfanity = false;
-  profanities.forEach((word) => {
-    if (userInput.includes(word)) {
-      containsProfanity = true;
-    }
-  });
-
   for (let word of profanities) {
     if (userInput.includes(word)) {
       containsProfanity = true;

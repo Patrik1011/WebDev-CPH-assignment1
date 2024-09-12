@@ -26,7 +26,7 @@ window.addEventListener('load', function () {
     displayStoredMessages();
   }
 
-  userName.textContent = createdUser ? createdUser : '';
+  userName.textContent = createdUser || '';
 
   // prompt user for their name
   //const nameOfUser = prompt('What is your name?');
