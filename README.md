@@ -1,4 +1,5 @@
 # Web Development Assignment vol. 1
+# W36
 
 This repository contains solutions to several exercises designed to practice and enhance your web development skills using HTML, CSS, and JavaScript. Each exercise focuses on different aspects of web development, including DOM manipulation, event handling, and using LocalStorage.
 
@@ -34,6 +35,58 @@ This repository contains solutions to several exercises designed to practice and
 ### Arrays & Objects
 
 1. **Student Grades Management**: Create a `Student` object to manage grades. Write functions to add grades and update the student's name.
+
+# W37
+## Frontend Exercises Overview
+This overview covers exercises on DOM manipulation, event handling, form validation, and asynchronous JavaScript.
+
+## Date Exercise
+- Add a timestamp to messages (format: `DD/MM/YYYY, hh:mm`).
+- Use the `title` attribute on HTML elements for hover text.
+
+## Forms Exercise
+- Add a "User" button in the header (top-right corner) linking to `user.html`.
+- Create a form for user creation:
+  - Include fields like "Name" to avoid repetitive pop-ups.
+  - Add JavaScript validation with custom error messages.
+
+## Async Exercise
+- Add a "Force Answer" button next to "Mr. Duck" in the header.
+- Use fetch, async/await, and event listeners to make "Mr. Duck" respond with jokes.
+
+## Email Validation Exercise
+- Implement custom JavaScript validation for emails ending with `@cphbusiness.dk`.
+
+## Local Storage Exercise
+- Save the user's name in `localStorage` when using the "Send" button.
+- Load the user's name from `localStorage` on page load.
+
+## Extra Exercises
+- Complete the user page with conditional validation and display error messages.
+- Add a delay to Mr. Duck's jokes for better timing.
+- Implement a profanity filter for user input using string matching.
+
+## Backend Exercises Overview
+This overview covers exercises on JavaScript basics like loops, arrays, objects, functions, and simple game logic.
+
+## 1. Loops & Arrays
+- Create an array with mixed data types.
+- Loop through the array to log each element's type.
+
+## 2. Loops & Objects
+- Create an array of book objects (`title`, `author`).
+- Use JavaScript to add each book to a `<ul>` on an HTML page.
+
+## 3. Functions
+- **findLargest**: Return the largest of four numbers.
+- **Range Check**: Check if a number is within a range.
+
+## 4. Repository Exercise
+- Clone a git repo.
+- Display numbers 1-20 on a webpage, style even/odd, and highlight on click.
+
+## 5. Higher or Lower Game
+- Build a number guessing game with feedback on whether guesses are too high or low and track attempts.
 
 # Author
 Patrik Hoferica
